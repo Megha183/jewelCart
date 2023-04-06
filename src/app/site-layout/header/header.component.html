@@ -1,0 +1,34 @@
+
+    
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid px-4 px-lg-5">
+                <img class="icon"src="https://i.postimg.cc/13WH51L3/jewel1.jpg" height="60px" width="60px"alt="">
+                <a class="navbar-brand" href="products"> Glitter Gem </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="products">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products/add_product">Add New Product</a></li>
+                    
+                        
+                    </ul>
+                    
+                    <form class="d-flex me-5 ms-5 me-auto"role="search">
+                        <input [(ngModel)]="searchTerm" (keyup)="search($event)" class="form-control me-2" type="search" placeholder="Search Product" aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="py-5" >
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bolder">Glitter Gems</h1>
+                    <p class="lead fw-normal  mb-0">Find the perfect jewelry to complement your look...</p>
+
+                </div>
+            </div>
+        </header>

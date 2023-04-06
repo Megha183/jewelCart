@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+nav div .navbar-brand{
+    font-family: 'Stylish', sans-serif;
+    font-size: 40px;
+    color:#811149;
+    
+    
+}
+
+header{
+    background-color:#811149;
+    
+   
+}
+nav{
+    background-color:#FFFFFF;
+}
+header h1,p{
+    color:#F5F5F5 ;
+}

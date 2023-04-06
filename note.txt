@@ -1,0 +1,193 @@
+life cycle of angular components
+
+constructor-->ngOnit-->other methods
+
+Data binding techniiques in angular (data sharing in component)
+---------------------------------
+
+html-view
+ts- component
+
+
+
+1.one way binding
+------------------
+
+1.1 component to view data sharing
+---------------------------------
+  1.1.1-  string interpolation  {{}}
+  1.1.2 -property binding  -[property]=""
+
+1.2. view to component data sharing
+   
+   1.2.1 event binding   (event)="method()"
+   1.2.2 event binding using $event  (event)=method($event)
+   1.2.3 event binding with template rendering  variable  #variable
+
+2.Two way binding
+-------------------------------
+2.1 ngModel   [(ngModel)]="property"
+
+Redirection in angular
+----------------------------
+Module -AppRoutingModule
+Router - a class used to redirect
+methods -navigateByUrl
+
+Dependency Injection
+----------------------
+to share data from one class to another class  --inside constructor
+
+we need 
+ access_specifier  reference:ClassName
+ private/public
+
+ reference.method()
+
+
+ Angular services
+ ------------------
+
+ to store redentant datas and methods 
+ -all the component can access the datas and methods defined 
+ in service file easily
+
+     -ng g s service_name
+
+
+Angular directives - to manipulate DOM
+
+-----------------------------
+
+1.component directives -
+
+2.structural directives   *ngfor *ngIf
+
+3.attribute directives [ngClass]
+
+Validation In Angular
+---------------------
+
+form creation in angular(2 types)
+
+  1.Template driven form
+  2.Model driven form (better method)
+       
+    2.1. Reactive form - used to create model of form
+       reactive form contain- group,array,control
+
+         -ReactiveFormsModule  - module
+         -FormBuilder          - class used to create model form 
+         -group()              - method to create model
+
+
+Local storage in angular
+--------------------------
+
+localStorage.getItem()
+localStorage.setItem()
+localStorage.removeItem()
+
+ts to json -stringify      parse-json to ts
+
+*Parent Child Components Communication
+---------------------------------------
+
+@Input() parent to child data sharing
+@Output() child to parent data sharing
+
+Event creation in angular
+-------------------------
+
+we can create our own events in angular projects
+
+EventEmitter - class used to create userderfined events
+
+             eventname=new EventEmitter()    (creating event)
+
+             emit() - to define the working time/to start the event
+
+Date and Time in Angular
+------------------------
+
+class -  Date
+
+Angular Pipes
+--------------
+
+used to convert datas into another format
+
+API creation In Angular
+-------------------------
+HttpClientModule - module to create web api calls
+
+HttpClient       - class inside the HttpClientModule
+
+folder    file     class  methods
+   |       |         |      |
+package  modules   class  methods 
+
+Asynchronous code handling in ts
+--------------------------------
+js- promise    - resolve  then()
+               - reject   catch()
+      
+ts- observable - resolve subscribe()
+               - reject  catch()
+
+
+Header generation for api request
+---------------------------------
+
+HttpHeaders class is used to generate header
+
+
+Lazy-Loading
+------------
+
+provide less loading time for high traffic pages
+
+ng g module (module name) --route (module name) --module app.module
+
+json server
+-----------
+ 1.  install server
+      npm i --save json-server                 ----->  install ,(we do it locally)
+
+ 2. run server in server file location      
+      npx json-server --watch db.json --port 3000    (locally instaling)
+
+
+Antique   - 1
+bangle    -2
+bridal    -3
+earing  -4
+ring  -5
+handmade-6
+
+
+Angular Pipes
+-------------
+to cnvert data into another format
+
+
+Pipes creation
+-------------
+     - ng g pipe (Pipe name)
+
+
+
+*Behaviour Subject
+-----------------
+ To share data between modules
+
+rxjs(Reactive extension for js)library of Behaviour subject
+rxs is used to handle async implementation in angular
+
+Activated Route In Angular
+----------------------------
+
+used to access data from urls( access params)
+
+class  - ActivatedRoute
+method - params()  (its an Asynchronous method)

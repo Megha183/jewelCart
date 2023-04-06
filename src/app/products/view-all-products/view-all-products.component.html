@@ -1,0 +1,111 @@
+<!-- 
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active" data-bs-interval="2000"
+        style="background-image:url(https://i.postimg.cc/fRQKcWJR/jewelb1.jpg) ;background-size: cover;  height: 450px;">
+        <div class="content">
+          <div class="captions">
+            <p>Discover a world of fascinating blogs</p>
+            <div class=" buttonnn text-center">
+              <button class="button2 btn " routerLink="/home">VIEW BLOGS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item"
+        style="background-image:url('https://unsplash.com/photos/vv2vIFeNEMg') ;background-size: cover;height: 450px;">
+        <div class="content">
+          <div class="captions">
+            <p>Express yourself through your own personal blog</p>
+            <div class=" buttonnn text-center">
+              <button class="button2 btn" routerLink="/addblog">CREATE BLOG</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
+
+<div class="container">
+    <div class="container row text-center">
+       <div class="p-4 col-3 category ">
+           <a (click)="filter('')"><img class="w-100"style="height:200px;border-radius:100px;" src="https://i.postimg.cc/J40Rx59z/jewellery-Collection.jpg" alt="">
+            <h4 class="pt-2">View All</h4></a>
+        </div>
+        <div class="p-4  col-3 category">
+            <a (click)="filter(3)"><img class="w-100"style="height:200px ;border-radius:100px;" src="https://i.postimg.cc/gk4QSxCc/bridal-Jewel.jpg" alt="">
+            <h4 class="pt-2">Bridal jewels</h4></a>
+        </div>
+        <div class="p-4 col-3 category">
+            <a (click)="filter(7)"><img class="w-100"style="height:200px ;border-radius:100px;" src="https://i.postimg.cc/MH1QqP32/silver5.jpg"  alt="">
+            <h4 class="pt-2">Silver jewels</h4></a>
+        </div>
+        <div class="p-4 col-3 category">
+            <a (click)="filter(6)"><img class="w-100"style="height:200px ;border-radius:100px;" src="https://i.postimg.cc/FRMCDgff/handmade.jpg" alt="">
+            <h4 class="pt-2">Handmade jewels</h4></a>
+        </div>
+        <div class="p-4 col-3 category">
+            <a (click)="filter(2)"><img class="w-100"style="height:200px ;border-radius:100px;" src="https://i.postimg.cc/NM9g6Wpt/bangles.jpg" alt="">
+            <h4 class="pt-2">Bangles</h4></a>
+        </div>
+        <div class="p-4 col-3 category">
+            <a (click)="filter(4)"> <img class="w-100"style="height:200px ;border-radius:100px;" src="https://i.postimg.cc/C14Q1VZ7/earings1.jpg" alt="">
+            <h4 class="pt-2">Earings</h4></a>
+        </div>
+        <div class="p-4 col-3 category">
+            <a (click)="filter(5)"><img class="w-100"style="height:200px ;border-radius:100px;" src="https://i.postimg.cc/MXJMrg5k/ring.jpg" alt="">
+            <h4 class="pt-2">Rings</h4></a>
+        </div>
+       
+        <div class="p-4 col-3 category">
+            <a (click)="filter(1)"><img class="w-100"style="height:200px ;border-radius:100px;" src="https://i.postimg.cc/SxWWk59S/bracelet6.jpg"  alt="">
+            <h4 class="pt-2">Bracelet</h4></a>
+        </div>
+       
+        
+    </div>
+</div>
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div *ngFor="let i of filterProducts | filter: searchkey :'productName'"  class="col mb-5 d1 ">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top " height="250" width="250"src="{{i.productImage}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{i.productName}}</h5>
+                            <!-- Product price-->
+                            {{i.price}} Rs
+                            <p>Rating <strong>{{i.rating}}</strong></p>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-secondary mt-auto"
+                               href="products/view_product/{{i.id}}">View</a></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </section>
+            
+           
+             
+           
+            
+           
+            

@@ -1,0 +1,16 @@
+.d1{
+    /* transform: 1s ease-out; */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease-in-out;
+transform: scale(1);
+   
+}
+.d1:hover{
+    transform: scale(1.1);
+}
+.category img:hover {
+    transform: scale(1); 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+  
